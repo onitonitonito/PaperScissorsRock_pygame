@@ -1,6 +1,6 @@
 ---
 layout: default
-comments: true
+comments: false
 description: This is Newly converted from original v2.0
 reference: https://www.pygame.org/project/3634
 ---
@@ -100,3 +100,15 @@ to it but not anything too fancy. I tend to discard projects because of the reas
 interesting at all, they have no appeal to them, they're coded extremely bad or I'm not happy with them.
 
 ----
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+  var disqus_shortname = 'kay';
+  (function() {
+    var dsq = document.createElement('script');
+		dsq.type='text/javascript'; dsq.async=true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
