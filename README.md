@@ -4,7 +4,7 @@ comments: true
 description: This is Newly converted from original v2.0
 reference: https://www.pygame.org/project/3634
 ---
-<img src="assets\\image\\icon.png" align="left" style="padding-right: 15px;">
+<img src="./assets/image/icon.png" align="left" style="padding-right: 15px;">
 
 # __Title: Game Paper, Scissors, Rock__
 
@@ -16,7 +16,7 @@ reference: https://www.pygame.org/project/3634
 
 ## 1.0 ABOUT
 
-| ![_HUMAN_](assets\\image\\human.png) | __VS.__ | ![__BOT__](assets\\image\\bot.png) |
+| ![_HUMAN_](./assets/image/human.png) | __VS.__ | ![__BOT__](./assets/image/bot.png) |
 |:-------:|:-:|:-----:|
 |__Human__|   |__Bot__|
 
