@@ -1,6 +1,6 @@
 ---
 layout: default
-comments: false
+comments: true
 description: This is Newly converted from original v2.0
 reference: https://www.pygame.org/project/3634
 ---
@@ -10,8 +10,8 @@ reference: https://www.pygame.org/project/3634
 
 
 ----
-
-* {{ page.description }} ... [[ __HERE!__ ]]({{ page.reference }})
+<!-- * {{ page.description }} ... [[ __HERE!__ ]]({{ page.reference }}) -->
+<!-- This Liquid Tags are not available! on Github docs -->
 
 
 ## 1.0 ABOUT
@@ -101,14 +101,8 @@ interesting at all, they have no appeal to them, they're coded extremely bad or 
 
 ----
 
-<div id="disqus_thread"></div>
+* Project site : [https://www.pygame.org/project/3634/5724](https://www.pygame.org/project/3634/5724)
 
-<script type="text/javascript">
-  var disqus_shortname = 'kay';
-  (function() {
-    var dsq = document.createElement('script');
-		dsq.type='text/javascript'; dsq.async=true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
+| <img src="https://goo.gl/xW851H" alt="pygame_logo" width="350"> |
+|:----:|
+| __PyGame LOGO__ |
