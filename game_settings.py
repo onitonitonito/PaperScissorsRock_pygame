@@ -16,11 +16,15 @@ FRAMES = 140
 SCRIPT_DELAY = 40
 
 # -- Colours --
-BLACK = [0,0,0]
-WHITE = [255,255,255]
-RED = [255,0,0]
-GREEN = [0,200,0]
-BLUE = [0,0,255]
+HEX_BLACK = '#000000'
+HEX_WHITE = '#ffffff'
+
+HEX_RED = '#ff0000'
+HEX_GREEN = '#00c800'
+HEX_BLUE = '#0000ff'
+
+HEX_COLOR_BG = '#aabbff'
+HEX_COLOR_ONMOUSE = '#ccddff'
 
 # -- Logic --
 try:
@@ -28,14 +32,14 @@ try:
 except:
     USER_NAME = "Player"
 
-SPLASH_TEXT_CHOICES = ["Welcome, {}!".format(USER_NAME),
-                       "Hello, {}!".format(USER_NAME),
-                       "It's-a me, {}!".format(USER_NAME),
-                       "{}, do a barrel roll!".format(USER_NAME),
-                       "Kept you waiting, huh?",
-                       "Made with Python 3 and Pygame!",
-                       "Version {}!".format(int(GAME_VERSION)),
-                       "{}, Chuck Norris!".format(GAME_NAME)
+SPLASH_TEXT_CHOICES = [f"Welcome, {USER_NAME}!",
+                       f"Hello, {USER_NAME}!",
+                       f"It's-a me, {USER_NAME}!",
+                       f"{USER_NAME}, do a barrel roll!",
+                       f"Kept you waiting, huh?",
+                       f"Made with Python 3 and Pygame!",
+                       f"Version {int(GAME_VERSION)}!",
+                       f"{GAME_NAME}, Chuck Norris!"
                        ]
 
 SPLASH_TEXT = choice(SPLASH_TEXT_CHOICES)

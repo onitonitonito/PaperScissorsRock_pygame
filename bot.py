@@ -1,4 +1,6 @@
-from random import choice, shuffle
+from random import shuffle
+from random import choice
+
 
 class Bot:
     def __init__(self):
@@ -22,4 +24,5 @@ class Bot:
         x = choice(choices)
         self.thrown.append(x)
 
+        print(f"{x[0:1].upper()}-", end='', flush=True)
         return x

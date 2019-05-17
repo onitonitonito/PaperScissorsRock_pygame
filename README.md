@@ -3,7 +3,7 @@
 
 ## 1.0 ABOUT
 
-| ![_HUMAN_](./assets/image/human.png) | _VS._ | ![__BOT__](./assets/image/bot.png) |
+| ![_HUMAN_](./static/image/human.png) | _VS._ | ![__BOT__](./static/image/bot.png) |
 |:-------:|:-:|:-----:|
 |__Human__|   |__Bot__|
 
@@ -34,7 +34,7 @@ good sources that you can recommend or game ideas.
 * Requirements:
 	- a __Python 3.x__ interpeter and the __pygame__ module
 * How to run:
-	- Run the main.py script in the Python 3.x interpeter
+	- Run the app.py script in the Python 3.x interpeter
 * How to play:
 	- It's basically click and point (exciting, I know. Next GoTY)
 	- **[F1]** ...... Resets the game
@@ -70,9 +70,9 @@ function does, it gets the username of the person playing the game.
 and it doesn't. For this, if it can't get the name of the person, it'll just use 'Player' instead.
 I'm guessing it's just a permission thing.
 
-> Why the directories for the assets if there's not that many of them?
+> Why the directories for the static if there's not that many of them?
 I'm very organised and I like my things sorted. When I started programming last year, my first game
-(Not this one) was a pygame one. Basically the main.py file was lost in a sea of images and stuff.
+(Not this one) was a pygame one. Basically the app.py file was lost in a sea of images and stuff.
 
 > Version 2?
 Yes. Most games I make are for fun and just to mess around with, nothing serious or worth putting

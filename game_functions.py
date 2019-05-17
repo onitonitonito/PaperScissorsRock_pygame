@@ -1,5 +1,5 @@
 import pygame
-import main
+import app
 
 from pygame.locals import *
 from game_settings import *
@@ -8,17 +8,47 @@ from game_assets import SFX_BEEP, TXT_MAIN
 
 pygame.mixer.init()
 
-def event_handler():
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            Power_Off()
-        elif event.type == pygame.KEYUP:
-            if event.key == K_ESCAPE:
-                Power_Off()
-            elif event.key == K_F1:
-                Power_Off(True)
 
-def Display_Text(surface, text, size=20, color=WHITE, pos=[0, 0], centered=True):
+def color_pick(hex_code_with_sharp):
+    """ turn '#aabbff' into color int array [170, 187, 255]
+    Convert HEX string 'aa' to INTEGER --> int('aa', base=16)
+    """
+    rgb_array_int = []
+    for i in [1, 3, 5]:
+        hex_to_int = int(hex_code_with_sharp[i:i+2], base=16)
+        rgb_array_int.append(hex_to_int)
+
+    return rgb_array_int
+
+
+def event_handler():
+    """ for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                Power_Off()
+            elif event.type == pygame.KEYUP:
+                if event.key == K_ESCAPE:
+                    Power_Off()
+                elif event.key == K_F1:
+                    Power_Off(True)
+    """
+    for event in pygame.event.get():
+        event_dict = {
+            'quit': [(event.type == QUIT),
+                     (event.type == KEYUP and event.key == K_ESCAPE),],
+            'F1': [(event.type == KEYUP and event.key == K_F1),],
+            '1': [(event.type == KEYUP and event.key == K_1),],
+            '2': [(event.type == KEYUP and event.key == K_2),],
+            '3': [(event.type == KEYUP and event.key == K_3),],
+        }
+
+        if any(event_dict['quit']): Power_Off()
+        if any(event_dict['F1']): Power_Off(True)
+        if any(event_dict['1']): pass
+        if any(event_dict['2']): pass
+        if any(event_dict['3']): Power_Off()
+
+
+def display_text(surface, text, size=20, color=color_pick(HEX_WHITE), pos=[0, 0], centered=True):
     font = pygame.font.Font(TXT_MAIN, size)
     text_obj = font.render(text, True, color).convert_alpha()
     width, height = text_obj.get_size()
@@ -29,7 +59,8 @@ def Display_Text(surface, text, size=20, color=WHITE, pos=[0, 0], centered=True)
 
     surface.blit(text_obj, pos)
 
-def Button(surface,  x, y, target=False, old_state="title", new_state=False, option=False, args=None):
+
+def button(surface,  x, y, target=False, old_state="title", new_state=False, option=False, args=None):
     pos = pygame.mouse.get_pos()
     keys = pygame.mouse.get_pressed()
 
@@ -42,12 +73,12 @@ def Button(surface,  x, y, target=False, old_state="title", new_state=False, opt
 
     if pos[0] > x - w // 2 and pos[0] < x - w // 2 + w and pos[1] > y - h // 2 and pos[1] < y - h // 2 + h:
         selected = True
-        rect.fill([200, 200, 255])
+        rect.fill(color_pick(HEX_COLOR_ONMOUSE))
         surface.blit(rect, [x - w // 2, y - h // 2])
 
     else:
         selected = False
-        rect.fill([170, 170, 255])
+        rect.fill(color_pick(HEX_COLOR_BG))
         surface.blit(rect, [x - w // 2, y - h // 2])
 
     if selected == True:
@@ -80,21 +111,23 @@ def Button(surface,  x, y, target=False, old_state="title", new_state=False, opt
         elif option != False:
             return False
 
-def multi_line_text(surface, size=20, spacing=20, color=WHITE, pos=[0, 0], centered=True, *text):
+
+def multi_line_text(surface, size=20, spacing=20, color=color_pick(HEX_WHITE), pos=[0, 0], centered=True, *text):
     next_line = 0
 
     for i in text:
         if i == "<n>":
             next_line += spacing
         else:
-            Display_Text(surface, i, size, color, [
+            display_text(surface, i, size, color, [
                          pos[0], pos[1] + next_line], centered)
             next_line += spacing
+
 
 def Power_Off(reset=False):
     if reset == True:
         pygame.quit()
-        main.Main()
+        app.main()
 
     else:
         pygame.quit()
