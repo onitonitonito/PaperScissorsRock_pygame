@@ -1,11 +1,11 @@
-# __Title: Game Paper, Scissors, Rock__
+# TITLE: Game Paper, Scissors, Rock
 ----
 
 ## 1.0 ABOUT
 
-| ![_HUMAN_](./static/image/human.png) | _VS._ | ![__BOT__](./static/image/bot.png) |
+| ![_HUMAN_](./static/image/human.png) | _VS._ | ![**BOT**](./static/image/bot.png) |
 |:-------:|:-:|:-----:|
-|__Human__|   |__Bot__|
+|**Human**|   |**Bot**|
 
 * Version: 2.0
 * Author: Joshua Harvey
@@ -31,20 +31,21 @@ good sources that you can recommend or game ideas.
 
 > ![_실행화면_](https://goo.gl/R2fXFj)
 
-* Requirements:
-	- a __Python 3.x__ interpeter and the __pygame__ module
-* How to run:
+* **Requirements:**
+	- a **Python 3.x** interpeter and the **pygame** module
+* **How to run:**
 	- Run the app.py script in the Python 3.x interpeter
-* How to play:
+* **How to play:**
 	- It's basically click and point (exciting, I know. Next GoTY)
 	- **[F1]** ...... Resets the game
 	- **[ESC]** ..... Quits the game
-	- Pick either __paper__, __scissors__ or __rock__ and the bot will pick one.
+	- Pick either **paper**, **scissors** or **rock** and the bot will pick one.
 	- You'll know if you won or lost.
 
 ----
 
 ## 4.0 KNOWN BUGS
+
 - Sometimes the title will move straight to the controls menu
 	(Raising the SCRIPT_DELAY variable helps a bit (Default = 40))
 
@@ -92,4 +93,4 @@ interesting at all, they have no appeal to them, they're coded extremely bad or 
 
 | <img src="https://goo.gl/xW851H" alt="pygame_logo" width="350"> |
 |:----:|
-| __PyGame LOGO__ |
+| **PyGame LOGO**|

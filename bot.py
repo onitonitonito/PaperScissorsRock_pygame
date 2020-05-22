@@ -1,6 +1,4 @@
-from random import shuffle
-from random import choice
-
+from random import (choice, shuffle,)
 
 class Bot:
     def __init__(self):

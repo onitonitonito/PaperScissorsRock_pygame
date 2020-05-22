@@ -2,8 +2,8 @@ import pygame
 import app
 
 from pygame.locals import *
-from game_settings import *
-from game_assets import SFX_BEEP, TXT_MAIN
+from assets.game_settings import *
+from assets.game_assets import SFX_BEEP, TXT_MAIN
 
 
 pygame.mixer.init()

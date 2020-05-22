@@ -8,15 +8,20 @@
 print(__doc__)
 
 import pygame
-
-from game_menus import *
-from game_settings import *
-from game_functions import *
-
-from bot import Bot
-from game_assets import IMG_ICON, IMG_BOT, IMG_BOT_LOSE, IMG_BOT_WIN, IMG_HUM
 from pygame.locals import *
 
+from assets.game_menus import *
+from assets.game_settings import *
+from assets.game_functions import *
+
+from bot import Bot
+from assets.game_assets import (
+                            IMG_ICON,
+                            IMG_BOT,
+                            IMG_BOT_LOSE,
+                            IMG_BOT_WIN,
+                            IMG_HUM.
+                        )
 
 decision_made = False
 choice_player = False

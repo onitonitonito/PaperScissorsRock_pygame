@@ -1,8 +1,8 @@
 import pygame
 
 from pygame.locals import *
-from game_settings import *
-from game_functions import *
+from assets.game_settings import *
+from assets.game_functions import *
 
 def title_screen(window):
     window.fill(color_pick(HEX_COLOR_BG))
